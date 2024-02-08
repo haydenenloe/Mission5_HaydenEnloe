@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hayden's Soccer Gang</title>
+        <link rel="icon" type="image/png" href="~/Soccerball.png">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/Mission5_HaydenEnloe.styles.css" asp-append-version="true" />
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container-fluid">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Hayden's Soccer Training</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Calculator">Calculator</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+        <div>
+            <h5>Background</h5>
+            <p>
+                Ever Since I was a kid, soccer has been my main sport. I played soccer at a top level for many years, and continue
+                to love the sport. I played for several different teams growing up, and I have played many different positions including
+                forward, holidng midfielder, and center back. My last year of playing competitive soccer in Utah, I won a state championship
+                with my club team, and I was the captain of my highschool soccer team. I am now hoping to take my knowledge and skills
+                and pass that on to the next generation.
+            </p>
+            <p>
+                I also love to watch the best players in the world. I love to watch our local RSl.
+                In Europes top leagues, my favorite team and PSG and Manchester City.
+            </p>
+            <p>
+                I will be holding private lessons on hourly sessions. Please contact me if you are interested.
+                My phone number is 555-555-5555
+            </p>
+        </div>
+        
+        <br />
+
+        <footer>
+            <div class="container">
+                &copy; Hayden's Soccer Training - <a asp-area="" asp-controller="Home" asp-action="Calculator">Calculator</a>        
+                <p>for a private soccer lesson, contact me at 555-555-5555. Website was built by the one and only Hayden Enloe</p>
+            </div>
+        </footer>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)
+    </body>
+</html>
